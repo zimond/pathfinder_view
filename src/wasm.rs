@@ -20,7 +20,7 @@ use pathfinder_renderer::{
     options::{BuildOptions, RenderTransform, RenderCommandListener},
 };
 use pathfinder_webgl::WebGlDevice;
-use pathfinder_resources::{EmbeddedResourceLoader};
+use pathfinder_resources::embedded::{EmbeddedResourceLoader};
 use std::cell::RefCell;
 
 struct Listener<F>(RefCell<F>);
