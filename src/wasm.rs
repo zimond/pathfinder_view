@@ -56,6 +56,11 @@ pub struct WasmView {
 }
 
 impl WasmView {
+    pub fn replace_interactive(&mut self, item: Box<dyn Interactive>) {
+        self.item = item;
+        self.ctx.update_scene = true;
+    }
+
     pub fn new(canvas: HtmlCanvasElement, config: Config, mut item: Box<dyn Interactive>) -> Self {
         canvas.set_attribute("tabindex", "0").unwrap();
         canvas.set_attribute("contenteditable", "true").unwrap();
